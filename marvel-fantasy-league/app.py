@@ -16,7 +16,10 @@ if TEAM not in st.session_state:
 
 st.title('Marvel Fantasy League')
 
+# TODO: proper email validation
 email = st.text_input("Email")
+email = email.lower()
+
 st.session_state[USER] = email
 
 if st.session_state[USER] == "":
